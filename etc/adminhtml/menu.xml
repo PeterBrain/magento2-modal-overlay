@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+            id="PeterBrain_ModalOverlay::modaloverlay"
+            title="Modal Overlay"
+            module="PeterBrain_ModalOverlay"
+            sortOrder="50"
+            dependsOnModule="PeterBrain_Core"
+            parent="PeterBrain_Core::peterbrain"
+            resource="PeterBrain_ModalOverlay::modaloverlay"
+        />
+            <add
+                id="PeterBrain_ModalOverlay::config"
+                title="Configuration"
+                module="PeterBrain_ModalOverlay"
+                sortOrder="10"
+                dependsOnModule="PeterBrain_ModalOverlay"
+                parent="PeterBrain_ModalOverlay::modaloverlay"
+                action="adminhtml/system_config/edit/section/pb_modaloverlay"
+                resource="PeterBrain_ModalOverlay::config"
+            />
+    </menu>
+</config>

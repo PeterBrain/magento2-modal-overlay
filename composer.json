@@ -1,0 +1,28 @@
+{
+    "name": "peterbrain/magento2-modal-overlay",
+    "description": "Display custom content from a static block in a modal",
+    "type": "magento2-module",
+    "version": "0.0.1",
+    "license": [
+        "OSL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "Peter Loecker",
+            "email": "peter.loecker@live.at",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "peterbrain/magento2-peterbrain-core": "^0.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "PeterBrain\\ModalOverlay\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
