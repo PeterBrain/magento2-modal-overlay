@@ -8,7 +8,7 @@ use Magento\Store\Model\ScopeInterface;
 class Data extends AbstractHelper
 {
 
-  const CONFIG_MODULE_PATH = 'modaloverlay';
+  const CONFIG_MODULE_PATH = 'pb_modaloverlay';
 
 	public function getConfigValue($field, $storeId = null)
 	{

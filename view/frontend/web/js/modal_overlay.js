@@ -47,7 +47,7 @@ define([
 
       var obj = getData();
 
-      if ($.mage.cookies.get('user_allowed_save_cookie') && obj.visited_pages >= 3) {
+      if (/*$.mage.cookies.get('user_allowed_save_cookie') && */obj.visited_pages >= 3) {
         var modal_overlay_element = $("#modal-overlay");
         var popup = modal(options, modal_overlay_element);
 

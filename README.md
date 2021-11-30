@@ -8,10 +8,12 @@ Package name: `peterbrain/magento2-modal-overlay`
     - [Method 1: Composer (recommended)](#method-1-composer-recommended)
     - [Method 2: Zip file (not recommended)](#method-2-zip-file-not-recommended)
     - [Enable & deploy](#enable--deploy)
+  - [Usage](#usage)
+  - [In-depth information](#in-depth-information)
 
 ## Main Functionalities
 
-Display custom content from a static block in a modal
+Display custom content from a static block in a modal.
 
 ## Installation
 
@@ -25,7 +27,7 @@ composer require peterbrain/magento2-modal-overlay
 
 - Unzip the zip file in `app/code/PeterBrain`
 
-This extension is dependent on [PeterBrain Core](https://github.com/PeterBrain/magento2-peterbrain-core). Make sure you installed this first.
+This extension is dependent on [PeterBrain Core](https://github.com/PeterBrain/magento2-peterbrain-core). Make sure that you have installed it first.
 
 ### Enable & deploy
 
@@ -34,3 +36,15 @@ php bin/magento module:enable PeterBrain_ModalOverlay
 php bin/magento setup:upgrade
 php bin/magento cache:flush
 ```
+
+## Usage
+
+- Enable module ouptut in `Stores > Configuration > PeterBrain Extensions > Modal Overlay > General Configuration`
+- In Magento 2 admin, navigate to `Content > Blocks` and create a new static block with the identifier `modal-overlay_popup`.
+- If the module is enabled, the static block exists and is enabled, the modal pops up:
+  - when a user vistits at least three pages
+  - once per user (stored in local storage - cookieless!)
+
+## In-depth information
+The visited pages (count) and status of modal are stored in local storage as follows:
+* `mage-cache-storage`: {"modal-overlay":{"displayed":false,"visited_pages":2}}
