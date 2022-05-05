@@ -2,7 +2,7 @@
     "name": "peterbrain/magento2-modal-overlay",
     "description": "Display custom content from a static block in a modal",
     "type": "magento2-module",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "license": [
         "OSL-3.0"
     ],

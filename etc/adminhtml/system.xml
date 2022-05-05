@@ -9,18 +9,14 @@
             <label>Modal Overlay</label>
             <tab>peterbrain</tab>
             <resource>PeterBrain_ModalOverlay::config</resource>
-            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General Configuration</label>
-                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="enable" translate="label comment tooltip" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enable Module</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Select Yes to enable modal output.</comment>
                     <tooltip>Select "Yes" to enable and "No" to disable modal output everywhere.</tooltip>
                 </field>
-                <!--<field id="display_text" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Display Text</label>
-                    <comment>This text will display on the frontend.</comment>
-                </field>-->
             </group>
         </section>
     </system>

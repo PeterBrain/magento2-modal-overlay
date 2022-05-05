@@ -3,8 +3,6 @@ define([
   "jquery",
   "Magento_Ui/js/modal/modal",
   "Magento_Customer/js/customer-data",
-  "mage/cookies",
-  "jquery/jquery.cookie",
 ], function (uiComponent, $, modal, storage) {
   "use strict";
 
@@ -31,23 +29,44 @@ define([
       this._super();
 
       var options = {
-        type: "popup",
-        responsive: true,
+        /*appendTo: "body",
+        autoOpen: false,*/
+        buttons: false /*[{
+          text: $.mage.__('Ok'),
+          class: '',
+          click: function () {
+            this.closeModal();
+          }
+        }]*/,
+        /*clickableOverlay: false,
+        closeText: $.mage.__('Close'),
+        customTpl: "ui/template/modal/modal-custom.html",
+        focus: '[data-role="closeBtn"]',*/
         innerScroll: false,
-        title: false,
-        buttons: false,
         modalClass: "pb_modal-overlay",
-        parentModalClass: "pb_modal-overlay_parent",
+        /*modalAction: '[data-role="action"]',
+        modalCloseBtn: '[data-role="closeBtn"]',
+        modalContent: '[data-role="content"]',
+        modalLeftMargin: 45,
+        modalSubTitle: '[data-role="subTitle"]',
+        modalTitle: '[data-role="title"]',*/
         modalVisibleClass: "pb_modal-overlay_active _show",
-        /*clickableOverlay: true,
+        parentModalClass: "pb_modal-overlay_parent _has-modal",
         outerClickHandler: function() {
-          this.closeModal();
-        },*/
+          $("#modal-overlay").modal("closeModal");
+        },
+        /*popupTpl: "ui/template/modal/modal-popup.html",*/
+        responsive: true,
+        /*slideTpl: "ui/template/modal/modal-slide.html",*/
+        subTitle: false,
+        title: false,
+        /*trigger: '[data-trigger="trigger"]',*/
+        type: "popup",
       };
 
       var obj = getData();
 
-      if (/*$.mage.cookies.get('user_allowed_save_cookie') && */obj.visited_pages >= 3) {
+      if (obj.visited_pages >= 3) {
         var modal_overlay_element = $("#modal-overlay");
         var popup = modal(options, modal_overlay_element);
 
