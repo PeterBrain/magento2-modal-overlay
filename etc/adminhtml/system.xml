@@ -17,6 +17,27 @@
                     <comment>Select Yes to enable modal output.</comment>
                     <tooltip>Select "Yes" to enable and "No" to disable modal output everywhere.</tooltip>
                 </field>
+                <field id="visited_pages_threshold" translate="label comment tooltip" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Visited Pages Threshold</label>
+                    <comment>Threshold for pages visited after which the modal should pop up. The number of actual pages visited must be greater than this threshold for the modal to be displayed.</comment>
+                    <tooltip>Only one positive non-decimal number (0, 3, 8, ...).</tooltip>
+                    <validate>required-entry no-whitespace integer</validate>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="information" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Information</label>
+                <attribute type="expanded">0</attribute>
+                <field id="module_name" translate="label" type="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Module Name</label>
+                    <frontend_model>PeterBrain\ModalOverlay\Block\Adminhtml\System\Config\Module\Name</frontend_model>
+                </field>
+                <field id="version" translate="label" type="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Module Version</label>
+                    <frontend_model>PeterBrain\ModalOverlay\Block\Adminhtml\System\Config\Module\Version</frontend_model>
+                </field>
             </group>
         </section>
     </system>

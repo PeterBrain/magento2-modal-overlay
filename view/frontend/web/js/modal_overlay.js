@@ -25,7 +25,7 @@ define([
   }
 
   return uiComponent.extend({
-    initialize: function () {
+    initialize: function (config) {
       this._super();
 
       var options = {
@@ -66,7 +66,7 @@ define([
 
       var obj = getData();
 
-      if (obj.visited_pages >= 3) {
+      if (obj.visited_pages >= config.visited_pages_threshold) {
         var modal_overlay_element = $("#modal-overlay");
         var popup = modal(options, modal_overlay_element);
 

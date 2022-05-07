@@ -45,4 +45,14 @@ class Data extends AbstractHelper
         return $this->getConfigGeneral('enable', $storeId);
     }
 
+    /**
+     * @param null $storeId
+     *
+     * @return bool
+     */
+    public function getVisitedPagesThreshold($storeId = null)
+    {
+        return $this->getConfigGeneral('visited_pages_threshold', $storeId);
+    }
+
 }

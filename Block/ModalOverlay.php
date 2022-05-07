@@ -23,11 +23,6 @@ class ModalOverlay extends Template
     private $blockRepository;
 
     /**
-     * @var Data
-     */
-    protected $helperData;
-
-    /**
      * ModalOverlay constructor.
      *
      * @param BlockRepositoryInterface $blockRepository
@@ -35,14 +30,11 @@ class ModalOverlay extends Template
      * @param array $data
      */
     public function __construct(
-        \PeterBrain\ModalOverlay\Helper\Data $helperData,
         BlockRepositoryInterface $blockRepository,
         Context $context,
         array $data = []
     ) {
-        $this->helperData = $helperData;
         $this->blockRepository = $blockRepository;
-
         parent::__construct($context, $data);
     }
 

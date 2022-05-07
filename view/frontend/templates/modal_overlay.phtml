@@ -10,12 +10,8 @@
     <script type="text/x-magento-init">
     {
       "*": {
-        "Magento_Ui/js/core/app": {
-          "components": {
-            "modal_overlay": {
-              "component": "PeterBrain_ModalOverlay/js/modal_overlay"
-            }
-          }
+        "PeterBrain_ModalOverlay/js/modal_overlay": {
+          "visited_pages_threshold": <?php echo $helper->getVisitedPagesThreshold(); ?>
         }
       }
     }

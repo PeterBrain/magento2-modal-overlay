@@ -11,8 +11,9 @@ class InstallData implements InstallDataInterface
 {
     private $blockFactory;
 
-    public function __construct(BlockFactory $blockFactory)
-    {
+    public function __construct(
+        BlockFactory $blockFactory
+    ) {
         $this->blockFactory = $blockFactory;
     }
 
@@ -21,7 +22,7 @@ class InstallData implements InstallDataInterface
         $cmsBlockData = [
             'title' => 'Modal Overlay Content',
             'identifier' => 'modal-overlay_popup',
-            'content' => 'Edit this in \'Content > Blocks\'. Block identifier: \'modal-overlay_popup\'',
+            'content' => 'This is a static block with the identifier: \'modal-overlay_popup\'. Edit it in \'Content > Blocks\'.',
             'is_active' => 1,
             'stores' => [0],
             'sort_order' => 0

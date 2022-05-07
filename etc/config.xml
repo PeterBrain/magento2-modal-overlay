@@ -4,6 +4,7 @@
         <pb_modaloverlay>
             <general>
                 <enable>0</enable>
+                <visited_pages_threshold>3</visited_pages_threshold>
             </general>
         </pb_modaloverlay>
     </default>

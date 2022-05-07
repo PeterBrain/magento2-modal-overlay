@@ -2,4 +2,7 @@
 
 "Enable Module","Enable Module"
 "Select Yes to enable modal output.","Select Yes to enable modal output."
-"Select "Yes" to enable and "No" to disable modal output everywhere.","Select "Yes" to enable and "No" to disable modal output everywhere."
+"Select ""Yes"" to enable and ""No"" to disable modal output everywhere.","Select ""Yes"" to enable and ""No"" to disable modal output everywhere."
+"Visited Pages Threshold","Visited Pages Threshold"
+"Threshold for pages visited after which the modal should pop up. The number of actual pages visited must be greater than this threshold for the modal to be displayed.","Threshold for pages visited after which the modal should pop up. The number of actual pages visited must be greater than this threshold for the modal to be displayed."
+"Only one positive non-decimal number (0, 3, 8, ...).","Only one positive non-decimal number (0, 3, 8, ...)."
