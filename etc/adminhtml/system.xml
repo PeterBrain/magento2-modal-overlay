@@ -30,13 +30,20 @@
             <group id="information" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Information</label>
                 <attribute type="expanded">0</attribute>
-                <field id="module_name" translate="label" type="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="module_name" translate="label" type="note" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Module Name</label>
-                    <frontend_model>PeterBrain\ModalOverlay\Block\Adminhtml\System\Config\Module\Name</frontend_model>
+                    <frontend_model>PeterBrain\Core\Block\Adminhtml\System\Config\Module\Name</frontend_model>
+                    <attribute type="module_name">PeterBrain_ModalOverlay</attribute>
                 </field>
-                <field id="version" translate="label" type="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="module_version" translate="label" type="note" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Module Version</label>
-                    <frontend_model>PeterBrain\ModalOverlay\Block\Adminhtml\System\Config\Module\Version</frontend_model>
+                    <frontend_model>PeterBrain\Core\Block\Adminhtml\System\Config\Module\Version</frontend_model>
+                    <attribute type="module_name">PeterBrain_ModalOverlay</attribute>
+                </field>
+                <field id="setup_version" translate="label" type="note" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Setup Version</label>
+                    <frontend_model>PeterBrain\Core\Block\Adminhtml\System\Config\Module\SetupVersion</frontend_model>
+                    <attribute type="module_name">PeterBrain_ModalOverlay</attribute>
                 </field>
             </group>
         </section>

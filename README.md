@@ -7,13 +7,14 @@ Package name: `peterbrain/magento2-modal-overlay`
   - [Installation](#installation)
     - [Method 1: Composer (recommended)](#method-1-composer-recommended)
     - [Method 2: Zip file (not recommended)](#method-2-zip-file-not-recommended)
-    - [Enable & deploy](#enable--deploy)
+    - [Enable \& deploy](#enable--deploy)
   - [Usage](#usage)
   - [In-depth information](#in-depth-information)
 
 ## Main Functionalities
 
-Display custom content from a static block in a modal.
+- Display custom content from a static block in a modal.
+- Show modal after a configurable amount of visited pages.
 
 ## Installation
 

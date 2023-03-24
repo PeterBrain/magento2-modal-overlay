@@ -1,8 +1,9 @@
 "Modal Overlay","Modal Overlay"
 
-"Enable Module","Aktiviere Modul"
-"Select Yes to enable modal output.","Wähle Ja, um das Modal zu aktivieren."
-"Select ""Yes"" to enable and ""No"" to disable modal output everywhere.","Wähle ""Ja"", um das Modal überall zu aktivieren und ""Nein"", um es zu deaktivieren."
-"Visited Pages Threshold","Schwellenwert für besuchte Seiten"
-"Threshold for pages visited after which the modal should pop up. The number of actual pages visited must be greater than this threshold for the modal to be displayed.","Schwellenwert für besuchte Seiten, ab dem das Modal angezeigt werden soll. Die Anzahl der tatsächlich besuchten Seiten muss größer sein als dieser Schwellenwert, damit das Modal angezeigt wird."
-"Only one positive non-decimal number (0, 3, 8, ...).","Nur eine positive, nicht dezimale Zahl (0, 3, 8, ...)."
+"Enable Module","Aktiviere Modul", module, PeterBrain_ModalOverlay
+"Select Yes to enable modal output.","Wähle Ja, um das Modal zu aktivieren.", module, PeterBrain_ModalOverlay
+"Select ""Yes"" to enable and ""No"" to disable modal output everywhere.","Wähle ""Ja"", um das Modal überall zu aktivieren und ""Nein"", um es zu deaktivieren.", module, PeterBrain_ModalOverlay
+
+"Visited Pages Threshold","Schwellenwert für besuchte Seiten", module, PeterBrain_ModalOverlay
+"Threshold for pages visited after which the modal should pop up. The number of actual pages visited must be greater than this threshold for the modal to be displayed.","Schwellenwert für besuchte Seiten, ab dem das Modal angezeigt werden soll. Die Anzahl der tatsächlich besuchten Seiten muss größer sein als dieser Schwellenwert, damit das Modal angezeigt wird.", module, PeterBrain_ModalOverlay
+"Only one positive non-decimal number (0, 3, 8, ...).","Nur eine positive, nicht dezimale Zahl (0, 3, 8, ...).", module, PeterBrain_ModalOverlay

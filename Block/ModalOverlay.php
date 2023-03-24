@@ -1,5 +1,4 @@
 <?php
-
 namespace PeterBrain\ModalOverlay\Block;
 
 use Magento\Cms\Api\BlockRepositoryInterface;
@@ -11,9 +10,9 @@ use Magento\Framework\View\Element\Template\Context;
 /**
  * Class ModalOverlay
  *
- * @category    PeterBrain
- * @package     PeterBrain_ModalOverlay
- * @copyright   Copyright (c) PeterBrain (https://peterbrain.com/)
+ * @author PeterBrain <peter.loecker@live.at>
+ * @copyright Copyright (c) PeterBrain (https://peterbrain.com/)
+ * @package PeterBrain\ModalOverlay\Block
  */
 class ModalOverlay extends Template
 {
@@ -23,15 +22,15 @@ class ModalOverlay extends Template
     private $blockRepository;
 
     /**
-     * ModalOverlay constructor.
+     * Constructor
      *
-     * @param BlockRepositoryInterface $blockRepository
      * @param Context $context
+     * @param BlockRepositoryInterface $blockRepository
      * @param array $data
      */
     public function __construct(
-        BlockRepositoryInterface $blockRepository,
         Context $context,
+        BlockRepositoryInterface $blockRepository,
         array $data = []
     ) {
         $this->blockRepository = $blockRepository;
@@ -39,9 +38,10 @@ class ModalOverlay extends Template
     }
 
     /**
-     * Retrieve modal overlay content
+     * Get modal overlay content
      *
      * @param $identifier
+     *
      * @return bool|string
      */
     public function getContent($identifier)
