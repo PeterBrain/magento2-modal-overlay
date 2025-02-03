@@ -8,10 +8,10 @@ use Magento\Framework\Setup\ModuleDataSetupInterface;
 
 /**
  * Class InstallData
+ * modal overlay schema
  *
  * @author PeterBrain <peter.loecker@live.at>
  * @copyright Copyright (c) PeterBrain (https://peterbrain.com/)
- * @package PeterBrain\ModalOverlay\Setup
  */
 class InstallData implements InstallDataInterface
 {
@@ -42,7 +42,8 @@ class InstallData implements InstallDataInterface
         $cmsBlockData = [
             'title' => 'Modal Overlay Content',
             'identifier' => 'modal-overlay_popup',
-            'content' => 'This is a static block with the identifier: \'modal-overlay_popup\'. Edit it in \'Content > Blocks\'.',
+            'content' =>
+                'This is a static block with the identifier: \'modal-overlay_popup\'. Edit it in \'Content > Blocks\'.',
             'is_active' => 1,
             'stores' => [0],
             'sort_order' => 0

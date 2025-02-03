@@ -1,21 +1,24 @@
-<?php $helper = $this->helper('PeterBrain\ModalOverlay\Helper\ModalOverlayHelper'); ?>
+<?php
+/**
+ * @var $block \PeterBrain\ModalOverlay\Block\ModalOverlay
+ */
+?>
+<?php if ($block->isEnabled()): ?>
+    <?php if ($content = $block->getContent('modal-overlay_popup')): ?>
 
-<?php if ($helper->isEnabled()): ?>
-  <?php if ($content = $block->getContent('modal-overlay_popup')): ?>
+        <div id="modal-overlay" style="display: none;">
+            <?= /* @noEscape */ $content; ?>
+        </div>
 
-    <div id="modal-overlay" style="display: none;">
-      <?php echo $content; ?>
-    </div>
-
-    <script type="text/x-magento-init">
-    {
-      "*": {
-        "PeterBrain_ModalOverlay/js/modal_overlay": {
-          "visited_pages_threshold": <?php echo $helper->getVisitedPagesThreshold(); ?>
+        <script type="text/x-magento-init">
+        {
+            "*": {
+                "PeterBrain_ModalOverlay/js/modal_overlay": {
+                    "visited_pages_threshold": <?= (int) $block->getVisitedPagesThreshold(); ?>
+                }
+            }
         }
-      }
-    }
-    </script>
+        </script>
 
-  <?php endif; ?>
+    <?php endif; ?>
 <?php endif; ?>

@@ -28,22 +28,23 @@ composer require peterbrain/magento2-modal-overlay
 
 - Unzip the zip file in `app/code/PeterBrain`
 
-This extension is dependent on [PeterBrain Core](https://github.com/PeterBrain/magento2-peterbrain-core). Make sure that you have installed it first.
+This extension requires [PeterBrain Core](https://github.com/PeterBrain/magento2-peterbrain-core). Ensure that you have it installed prior to installing this module. Use Composer to install it automatically with this module.
 
 ### Enable & deploy
 
 ```bash
-php bin/magento module:enable PeterBrain_ModalOverlay
-php bin/magento setup:upgrade
-php bin/magento cache:flush
+bin/magento module:enable PeterBrain_ModalOverlay
+bin/magento setup:upgrade
+bin/magento setup:static-content:deploy
+bin/magento cache:flush
 ```
 
 ## Usage
 
-- Enable module ouptut in `Stores > Configuration > PeterBrain Extensions > Modal Overlay > General Configuration`
+- Enable module output in `Stores > Configuration > PeterBrain Extensions > Modal Overlay > General Configuration`
 - In Magento 2 admin, navigate to `Content > Blocks` and create a new static block with the identifier `modal-overlay_popup`.
 - If the module is enabled, the static block exists and is enabled, the modal pops up:
-  - when a user vistits at least three pages
+  - when a user visits at least three pages
   - once per user (stored in local storage - cookieless!)
 
 ## In-depth information

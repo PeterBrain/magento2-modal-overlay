@@ -6,10 +6,10 @@ use Magento\Store\Model\ScopeInterface;
 
 /**
  * Class ModalOverlayHelper
+ * modal overlay main helper
  *
  * @author PeterBrain <peter.loecker@live.at>
  * @copyright Copyright (c) PeterBrain (https://peterbrain.com/)
- * @package PeterBrain\ModalOverlay\Helper
  */
 class ModalOverlayHelper extends AbstractHelper
 {
@@ -46,19 +46,19 @@ class ModalOverlayHelper extends AbstractHelper
     /**
      * @param null $storeId
      *
-     * @return string
+     * @return boolean
      */
-    public function isEnabled($storeId = null): string
+    public function isEnabled($storeId = null): bool
     {
-        return $this->getConfigGeneral('enable', $storeId);
+        return $this->getConfigGeneral('enable', $storeId) ?: false;
     }
 
     /**
      * @param null $storeId
      *
-     * @return string
+     * @return int
      */
-    public function getVisitedPagesThreshold($storeId = null): string
+    public function getVisitedPagesThreshold($storeId = null): int
     {
         return $this->getConfigGeneral('visited_pages_threshold', $storeId);
     }
