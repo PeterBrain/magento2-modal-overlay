@@ -9,7 +9,7 @@ define([
   var cacheKey = "modal-overlay";
 
   var getData = function () {
-    return storage.get(cacheKey)();
+    return storage.get(cacheKey)() || {};
   };
 
   var saveData = function (data) {
@@ -17,11 +17,10 @@ define([
   };
 
   if ($.isEmptyObject(getData())) {
-    var modal_overlay = {
+    saveData({
       displayed: false,
       visited_pages: 1,
-    };
-    saveData(modal_overlay);
+    });
   }
 
   return uiComponent.extend({
@@ -68,10 +67,17 @@ define([
 
       if (obj.visited_pages >= config.visited_pages_threshold) {
         var modal_overlay_element = $("#modal-overlay");
-        var popup = modal(options, modal_overlay_element);
+
+        if (!modal_overlay_element.length) {
+          console.error("Error: #modal-overlay element not found in the DOM");
+          return;
+        }
+
+        if (!modal_overlay_element.data("mageModal")) {
+          modal_overlay_element.modal(options);
+        }
 
         modal_overlay_element.css("display", "block");
-
         this.openModalOverlayModal();
       }
 
@@ -80,6 +86,11 @@ define([
 
     openModalOverlayModal: function () {
       var modalContainer = $("#modal-overlay");
+
+      if (!modalContainer.length) {
+        console.error("Error: #modal-overlay element not found in the DOM");
+        return;
+      }
 
       if (this.getDisplayed()) {
         return false;
@@ -103,7 +114,7 @@ define([
 
     incVisitedPages: function (data) {
       var obj = getData();
-      obj.visited_pages = obj.visited_pages + data;
+      obj.visited_pages += data;
       saveData(obj);
     },
 
